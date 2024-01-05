@@ -2,6 +2,8 @@ import { getProjects } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
 
+import { Analytics } from '@vercel/analytics/react';
+
 export default async function Home() {
   const projects = await getProjects();
 
@@ -31,6 +33,8 @@ export default async function Home() {
           </Link>
       ))}
     </div>
+
+    <Analytics />
   </div>
   )
 }
