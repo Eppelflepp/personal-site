@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default async function Home() {
   const projects = await getProjects();
@@ -35,6 +36,7 @@ export default async function Home() {
     </div>
 
     <Analytics />
+    <SpeedInsights />
   </div>
   )
 }
